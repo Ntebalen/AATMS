@@ -6,16 +6,28 @@
     <title>Register</title>
 </head>
 <body>
+    <!-- Page title -->
     <h1>Register</h1>
+
+    <!-- Registration form where users input their details -->
     <form action="/register" method="POST">
+        <!-- Div for the username input -->
         <div>
+            <!-- Label associated with the username input -->
             <label for="username">Username</label>
-            <input type="text" name="username" required>
+            <!-- Text input for the username, 'required' ensures the field must be filled out -->
+            <input type="text" name="username" id="username" required>
         </div>
+
+        <!-- Div for the password input -->
         <div>
+            <!-- Label associated with the password input -->
             <label for="password">Password</label>
-            <input type="password" name="password" required>
+            <!-- Password input field, 'required' ensures the field must be filled out -->
+            <input type="password" name="password" id="password" required>
         </div>
+
+        <!-- Submit button to send the form data to the server -->
         <button type="submit">Register</button>
     </form>
 </body>
