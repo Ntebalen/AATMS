@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Admin Dashboard</title>
+
+    <!-- Montserrat Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="newdashboard.css">
+  </head>
+  <body>
+    <div class="grid-container">
+
+      <!-- Header -->
+      <header class="header">
+        <div class="menu-icon" onclick="openSidebar()">
+          <span class="material-icons-outlined">menu</span>
+        </div>
+       
+      </header>
+      <!-- End Header -->
+
+      <!-- Sidebar -->
+      <aside id="sidebar">
+        <div class="sidebar-title">
+          <div class="sidebar-brand">
+            LOGO
+          </div>
+          <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+        </div>
+
+        <ul class="sidebar-list">
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank">
+              <span class="material-icons-outlined">dashboard</span> Dashboard
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank">
+                <span class="material-symbols-outlined">
+                    water
+                    </span> Water Flow
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank">
+                <span class="material-symbols-outlined">
+                    ac_unit
+                    </span> Inside Temp
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank">
+                <span class="material-symbols-outlined">
+                    humidity_indoor
+                    </span> Inside Humidity
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank">
+              <span class="material-symbols-outlined">
+                partly_cloudy_day
+                </span> Ambient Temp
+            </a>
+          </li>
+      </aside>
+      <!-- End Sidebar -->
+
+      <!-- Main -->
+      <main class="main-container">
+        <div class="main-title">
+          <h2>DASHBOARD</h2>
+        </div>
+
+        <div class="main-cards">
+
+            <div class="card">
+                <div class="card-inner">
+                  <h3>WATER FLOW</h3>
+                  <span class="material-symbols-outlined">
+                    water
+                    </span>
+                </div>
+                <h1>56</h1>
+              </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <h3>INSIDE TEMPERATURE</h3>
+              <span class="material-symbols-outlined">
+                ac_unit
+                </span>
+            </div>
+            <h1>25</h1>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <h3>INSIDE HUMIDITY</h3>
+              <span class="material-symbols-outlined">
+                humidity_indoor
+                </span>
+            </div>
+            <h1>1500</h1>
+          </div>
+
+          
+          <div class="card">
+            <div class="card-inner">
+              <h3>AMBIENT TEMPERATURE</h3>
+              <span class="material-symbols-outlined">
+                partly_cloudy_day
+                </span>
+            </div>
+            <h1>249</h1>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <h3>SOIL MOISTURE</h3>
+              <span class="material-symbols-outlined">
+                humidity_mid
+                </span>
+            </div>
+            <h1>249</h1>
+          </div>
+        </div>
+
+        <div class="charts">
+
+          <div class="charts-card">
+            <h2 class="chart-title">FAN STATUS:</h2>
+            <div class="border-line"> <p> OFF </p> </div>
+            <h2 class="chart-title">VALVE STATUS:</h2>
+            <div class="border-line"><p> OFF</p></div>
+            <h2 class="chart-title">MESSAGE: </h2>
+            <div> <p> No warning</p></div>
+          </div>
+
+
+          <div class="charts-card">
+            <h2 class="chart-title">WATER FLOW</h2>
+            <div id="waterflow-chart"></div>
+          </div>
+
+          <div class="charts-card">
+            <h2 class="chart-title">INSIDE TEMPERATURE</h2>
+            <div id="insideTemp-chart"></div>
+          </div>
+
+          <div class="charts-card">
+            <h2 class="chart-title">INSIDE HUMIDITY</h2>
+            <div id="insideHumi-chart"></div>
+          </div>
+
+          <div class="charts-card">
+            <h2 class="chart-title">AMBIENT TEMPERATURE</h2>
+            <div id="ambientTemp-chart"></div>
+          </div>
+
+          <div class="charts-card">
+            <h2 class="chart-title">SOIL MOISTURE</h2>
+            <div id="soilMoisture-chart"></div>
+          </div>
+
+        </div>
+      </main>
+      <!-- End Main -->
+
+    </div>
+
+    <!-- Scripts -->
+    <!-- ApexCharts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.53.0/apexcharts.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <!-- Custom JS -->
+    <script src="/newdashboard.js"></script>
+  </body>
+</html>
