@@ -4,46 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <!-- Adding some basic styles for the page -->
     <style>
+        /* Setting up the body of the page */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            text-align: center;
-            padding: 50px;
+            font-family: Arial, sans-serif; /* Use Arial for a clean, simple look */
+            background-color: #f0f0f0; /* Light gray background for contrast */
+            text-align: center; /* Center the content on the page */
+            padding: 50px; /* Add padding around the content */
         }
+
+        /* Styling the form itself */
         form {
-            display: inline-block;
-            margin-top: 20px;
+            display: inline-block; /* Keep the form contents in one line */
+            margin-top: 20px; /* Add some space above the form */
         }
+
+        /* Styling the input fields (username and password) */
         input {
-            padding: 10px;
-            margin: 5px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
+            padding: 10px; /* Add padding inside the input fields */
+            margin: 5px; /* Space between the input fields */
+            border-radius: 5px; /* Round the corners slightly */
+            border: 1px solid #ccc; /* Light gray border */
         }
+
+        /* Styling the submit button */
         button {
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
+            padding: 10px 20px; /* Add padding inside the button for a better click area */
+            background-color: #007bff; /* Use a blue color for the button */
+            color: white; /* White text on the button */
+            border: none; /* No border for the button */
+            border-radius: 5px; /* Round the button corners */
+            cursor: pointer; /* Show pointer when hovering over the button */
         }
+
+        /* Change the button color when hovering over it */
         button:hover {
-            background-color: #0056b3;
+            background-color: #0056b3; /* Darker blue when hovering */
         }
     </style>
 </head>
 <body>
+    <!-- Page title -->
     <h1>Login</h1>
-    <form action="/login" method="POST">
+    
+    <!-- Login form where users input their username and password -->
+    <form action="/login" method="POST"> <!-- POST sends data securely to the server -->
         <div>
+            <!-- Input field for username, 'required' means this field must be filled out -->
             <input type="text" name="username" placeholder="Username" required>
         </div>
         <div>
+            <!-- Input field for password, 'required' means this field must be filled out -->
             <input type="password" name="password" placeholder="Password" required>
         </div>
+        <!-- Submit button to send the form data -->
         <button type="submit">Login</button>
     </form>
 </body>
 </html>
+
